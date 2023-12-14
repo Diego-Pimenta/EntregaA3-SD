@@ -1,0 +1,26 @@
+services:
+  mysqldb:
+    image: mysql:8.0.35-debian
+    environment:
+      MYSQL_DATABASE: nosso_pisante
+      MYSQL_USER: pisante
+      MYSQL_PASSWORD: 123
+      MYSQL_ROOT_PASSWORD: 1234
+    ports:
+      - 3006:3306
+    networks:
+      - springmysql
+
+  nosso-pisante-api:
+    build: .
+    environment:
+      - spring.datasource.url=jdbc:mysql://nosso-pisante-api-mysqldb-1:3306/nosso_pisante?useTimezone=true&serverTimezone=UTC&createDatabaseIfNotExist=true
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysqldb
+    networks:
+      - springmysql
+
+networks:
+  springmysql:

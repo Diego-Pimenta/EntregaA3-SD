@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "a3709d58-f989-4ce0-8298-0b09d4fe4e34",
+		"name": "Nosso-Pisante",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24314065"
+	},
+	"item": [
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Add-Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Teste\",\r\n    \"email\": \"test@email.com\",\r\n    \"address\": \"Address Teste\",\r\n    \"phone_number\": \"Phone Number Test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/client",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Client-By-Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/client/18959c5e-112e-4c0f-9605-526f05a9b22b",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"client",
+								"18959c5e-112e-4c0f-9605-526f05a9b22b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/client",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"address\": \"another address\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/client/18959c5e-112e-4c0f-9605-526f05a9b22b",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"client",
+								"18959c5e-112e-4c0f-9605-526f05a9b22b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/client/18959c5e-112e-4c0f-9605-526f05a9b22b",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"client",
+								"18959c5e-112e-4c0f-9605-526f05a9b22b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product-Stock",
+			"item": [
+				{
+					"name": "Add-Product-Stock",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name_product\": \"Example Product\",\r\n    \"quantity\": 10,\r\n    \"brand\": \"Example Brand\",\r\n    \"price\": 19.99,\r\n    \"category\": \"Example Category\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/product-stock",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Product-Stock-By-Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/product-stock/6f42eb36-1938-4bd6-b091-19dce36b3bd0",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-stock",
+								"6f42eb36-1938-4bd6-b091-19dce36b3bd0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Products-Stock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/product-stock",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update-Product-Stock",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name_product\": \"Example\"\r\n    // \"quantity\": 20\r\n    // \"brand\": \"Example Brand\",\r\n    // \"price\": 39.99\r\n    // \"category\": \"Example Category\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/product-stock/904d9f13-11ad-49af-969b-48ff9eefe3d6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-stock",
+								"904d9f13-11ad-49af-969b-48ff9eefe3d6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Product-Stock",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/product-stock/904d9f13-11ad-49af-969b-48ff9eefe3d6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"product-stock",
+								"904d9f13-11ad-49af-969b-48ff9eefe3d6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sale",
+			"item": [
+				{
+					"name": "Register-Sale",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"client_id\": \"17cf6a65-98f8-11ee-8caf-0242ac120002\",\r\n  \"products_id\": [\"17c6cc85-98f8-11ee-8caf-0242ac120002\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sale",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sale"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "report",
+			"item": [
+				{
+					"name": "Most-Sold-Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/report/most-sold-product",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"report",
+								"most-sold-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products-By-Client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/report/products/17cf6a65-98f8-11ee-8caf-0242ac120002",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"report",
+								"products",
+								"17cf6a65-98f8-11ee-8caf-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consumption-By-Client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/report/consumption/17cf6a65-98f8-11ee-8caf-0242ac120002",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"report",
+								"consumption",
+								"17cf6a65-98f8-11ee-8caf-0242ac120002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Low-Stock-Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/report/low-stock-products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"report",
+								"low-stock-products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
